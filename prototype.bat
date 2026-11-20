@@ -1,40 +1,46 @@
 @echo off
 
-echo 1. Create Demo Data
-echo 2. Generate SBOM
-echo 3. Load SRAC
-echo 4. Run Impact Analysis
-echo 5. Run All Tests
+if /I "%1"=="impact" (
+    "C:\Users\devashrid\AppData\Local\Programs\Python\Python313\python.exe" impact-analysis.py %2 %3 %4
+    goto END
+)
 
-set /p choice=Enter choice:
+if /I "%1"=="cve" (
+    "C:\Users\devashrid\AppData\Local\Programs\Python\Python313\python.exe" impact-analysis.py %2
+    goto END
+)
 
-if "%choice%"=="1" goto DATA
-if "%choice%"=="2" goto SBOM
-if "%choice%"=="3" goto SRAC
-if "%choice%"=="4" goto IMPACT
-if "%choice%"=="5" goto TESTS
+if /I "%1"=="test" (
 
-goto END
+    echo ========================================
+    echo TEST 1 - OpenSSL
+    echo ========================================
+    call prototype.bat impact OpenSSL
 
-:DATA
-echo Creating Demo Data...
-goto END
+    echo.
 
-:SBOM
-echo Generating SBOM...
-goto END
+    echo ========================================
+    echo TEST 2 - NASA CryptoLib
+    echo ========================================
+    call prototype.bat impact "NASA CryptoLib"
 
-:SRAC
-echo Loading SRAC...
-goto END
+    echo.
 
-:IMPACT
-echo Running Impact Analysis...
-goto END
+    echo ========================================
+    echo TEST 3 - Telemetry Library
+    echo ========================================
+    call prototype.bat impact "Telemetry Library"
 
-:TESTS
-echo Running Tests...
-goto END
+    goto END
+)
+
+echo.
+echo Usage:
+echo.
+echo prototype.bat impact OpenSSL
+echo prototype.bat impact "NASA CryptoLib"
+echo prototype.bat impact "Telemetry Library"
+echo prototype.bat test
+echo prototype.bat cve CVE-2026-1234
 
 :END
-pause

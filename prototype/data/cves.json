@@ -1,0 +1,16 @@
+{
+  "cves": [
+    {
+      "cve": "CVE-2026-1234",
+      "component": "OpenSSL"
+    },
+    {
+      "cve": "CVE-2026-5678",
+      "component": "NASA CryptoLib"
+    },
+    {
+      "cve": "CVE-2026-9012",
+      "component": "Telemetry Library"
+    }
+  ]
+}
