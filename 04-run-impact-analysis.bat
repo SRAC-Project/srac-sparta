@@ -1,5 +1,3 @@
 @echo off
-
-"C:\Users\devashrid\AppData\Local\Programs\Python\Python313\python.exe" impact-analysis.py %*
-
-pause
+call "%~dp0prototype.bat" impact %*
+exit /b %ERRORLEVEL%

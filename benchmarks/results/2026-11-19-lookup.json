@@ -1,0 +1,1912 @@
+{
+  "completed_utc": "2026-11-20T04:37:57.843531+00:00",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 186 Stepping 3, GenuineIntel",
+  "python": "3.12.14",
+  "timer": "perf_counter_ns",
+  "method": "Fresh Python process, JSON file reads, lookup, formatting, new output directory, report write, captured console output and process exit. Verification is outside timed interval.",
+  "cache_policy": "No warm-up trials excluded. OS file cache not cleared; fresh process is not a cold-cache test.",
+  "dataset": {
+    "cve_mappings": 3,
+    "assertions": 4,
+    "components": 3,
+    "cve_bytes": 252,
+    "assertion_bytes": 1377
+  },
+  "source_sha256": {
+    "impact-analysis.py": "e7cebdb75c5df198dbe9340aa9fd11fc3762369b822ededcc81d24d68b0698ab",
+    "prototype\\data\\cves.json": "3c8dfa14b2b7b895eaa6385a36a6be354830fe8f7454213d0ef667dad6493417",
+    "prototype\\srac\\srac-assertions.json": "2dc5083d1a3071109fa4d00c89859ed7bf8ede6b2af5185865656c6f32010e29"
+  },
+  "repeats_per_case_per_engine": 30,
+  "all_outputs_verified": true,
+  "summaries": {
+    "prototype": {
+      "n": 90,
+      "min_s": 0.1890082,
+      "median_s": 0.2143435,
+      "mean_s": 0.2203949488888889,
+      "p95_s": 0.2791531,
+      "max_s": 0.3553174,
+      "under_10_s": 90
+    },
+    "generic_baseline": {
+      "n": 90,
+      "min_s": 0.1488811,
+      "median_s": 0.16841945000000003,
+      "mean_s": 0.17295719222222222,
+      "p95_s": 0.201469,
+      "max_s": 0.2775614,
+      "under_10_s": 90
+    }
+  },
+  "by_case": {
+    "prototype": {
+      "CVE-2026-1234": {
+        "n": 30,
+        "min_s": 0.1961667,
+        "median_s": 0.21066315000000002,
+        "mean_s": 0.21537351666666665,
+        "p95_s": 0.2508842,
+        "max_s": 0.2877101,
+        "under_10_s": 30
+      },
+      "CVE-2026-5678": {
+        "n": 30,
+        "min_s": 0.1890082,
+        "median_s": 0.21483839999999998,
+        "mean_s": 0.21795936333333332,
+        "p95_s": 0.2766606,
+        "max_s": 0.2896619,
+        "under_10_s": 30
+      },
+      "CVE-2026-9012": {
+        "n": 30,
+        "min_s": 0.1960075,
+        "median_s": 0.21774715,
+        "mean_s": 0.22785196666666666,
+        "p95_s": 0.2806265,
+        "max_s": 0.3553174,
+        "under_10_s": 30
+      }
+    },
+    "generic_baseline": {
+      "CVE-2026-1234": {
+        "n": 30,
+        "min_s": 0.154192,
+        "median_s": 0.16766999999999999,
+        "mean_s": 0.17086895333333332,
+        "p95_s": 0.2009721,
+        "max_s": 0.2064459,
+        "under_10_s": 30
+      },
+      "CVE-2026-5678": {
+        "n": 30,
+        "min_s": 0.1575932,
+        "median_s": 0.17021225,
+        "mean_s": 0.17339607666666668,
+        "p95_s": 0.2010074,
+        "max_s": 0.206981,
+        "under_10_s": 30
+      },
+      "CVE-2026-9012": {
+        "n": 30,
+        "min_s": 0.1488811,
+        "median_s": 0.16557705,
+        "mean_s": 0.17460654666666667,
+        "p95_s": 0.2056836,
+        "max_s": 0.2775614,
+        "under_10_s": 30
+      }
+    }
+  },
+  "limits": [
+    "Synthetic prepared dataset only; no engineering evidence fetched or validated.",
+    "No human/manual timing measured; 40-minute claim and end-to-end savings remain unverified.",
+    "Generic baseline reads the same SRAC-shaped fixture data; this tests scripting overhead, not existing engineering tools or interoperability.",
+    "Preparation, maintenance, integration, assessment and approval costs excluded.",
+    "Single machine and serial execution; no scale, concurrency or cold-cache conclusion."
+  ],
+  "trials": [
+    {
+      "order": 0,
+      "engine": "generic_baseline",
+      "repeat": 21,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.1766668,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 1,
+      "engine": "prototype",
+      "repeat": 10,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.2142877,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 2,
+      "engine": "generic_baseline",
+      "repeat": 28,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.1747585,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 3,
+      "engine": "generic_baseline",
+      "repeat": 19,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.1647812,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 4,
+      "engine": "generic_baseline",
+      "repeat": 18,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.1640014,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 5,
+      "engine": "generic_baseline",
+      "repeat": 27,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.1863843,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 6,
+      "engine": "generic_baseline",
+      "repeat": 17,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.1773176,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 7,
+      "engine": "prototype",
+      "repeat": 6,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.2207128,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 8,
+      "engine": "generic_baseline",
+      "repeat": 20,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.1596617,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 9,
+      "engine": "prototype",
+      "repeat": 16,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.2099196,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 10,
+      "engine": "generic_baseline",
+      "repeat": 4,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.1743332,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 11,
+      "engine": "generic_baseline",
+      "repeat": 2,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.154192,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 12,
+      "engine": "generic_baseline",
+      "repeat": 25,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.1735217,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 13,
+      "engine": "generic_baseline",
+      "repeat": 24,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.1838523,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 14,
+      "engine": "generic_baseline",
+      "repeat": 7,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.1831238,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 15,
+      "engine": "prototype",
+      "repeat": 4,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.2263983,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 16,
+      "engine": "generic_baseline",
+      "repeat": 16,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.1709362,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 17,
+      "engine": "generic_baseline",
+      "repeat": 11,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.1639206,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 18,
+      "engine": "generic_baseline",
+      "repeat": 24,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.174443,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 19,
+      "engine": "prototype",
+      "repeat": 26,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.211689,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 20,
+      "engine": "generic_baseline",
+      "repeat": 8,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.1897849,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 21,
+      "engine": "prototype",
+      "repeat": 27,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.2460499,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 22,
+      "engine": "prototype",
+      "repeat": 17,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.2082268,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 23,
+      "engine": "generic_baseline",
+      "repeat": 15,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.1674141,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 24,
+      "engine": "generic_baseline",
+      "repeat": 4,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.1614802,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 25,
+      "engine": "generic_baseline",
+      "repeat": 27,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.1598926,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 26,
+      "engine": "generic_baseline",
+      "repeat": 7,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.1617912,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 27,
+      "engine": "prototype",
+      "repeat": 12,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.2131944,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 28,
+      "engine": "generic_baseline",
+      "repeat": 2,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.1574612,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 29,
+      "engine": "prototype",
+      "repeat": 8,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.1982541,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 30,
+      "engine": "prototype",
+      "repeat": 13,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.3553174,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 31,
+      "engine": "prototype",
+      "repeat": 23,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.2121375,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 32,
+      "engine": "generic_baseline",
+      "repeat": 23,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.1562517,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 33,
+      "engine": "prototype",
+      "repeat": 0,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.2083528,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 34,
+      "engine": "generic_baseline",
+      "repeat": 20,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.1610036,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 35,
+      "engine": "prototype",
+      "repeat": 25,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.1961667,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 36,
+      "engine": "prototype",
+      "repeat": 24,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.2092476,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 37,
+      "engine": "prototype",
+      "repeat": 7,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.2196604,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 38,
+      "engine": "prototype",
+      "repeat": 21,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.2152775,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 39,
+      "engine": "prototype",
+      "repeat": 5,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.2028346,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 40,
+      "engine": "generic_baseline",
+      "repeat": 22,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.1850242,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 41,
+      "engine": "generic_baseline",
+      "repeat": 15,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.1645249,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 42,
+      "engine": "generic_baseline",
+      "repeat": 15,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.201469,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 43,
+      "engine": "prototype",
+      "repeat": 5,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.2011425,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 44,
+      "engine": "generic_baseline",
+      "repeat": 21,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.1573194,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 45,
+      "engine": "generic_baseline",
+      "repeat": 29,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.1859344,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 46,
+      "engine": "prototype",
+      "repeat": 1,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.2645316,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 47,
+      "engine": "generic_baseline",
+      "repeat": 19,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.1615076,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 48,
+      "engine": "generic_baseline",
+      "repeat": 28,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.1613245,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 49,
+      "engine": "prototype",
+      "repeat": 29,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.2193093,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 50,
+      "engine": "generic_baseline",
+      "repeat": 0,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.1694401,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 51,
+      "engine": "prototype",
+      "repeat": 15,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.2072995,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 52,
+      "engine": "generic_baseline",
+      "repeat": 14,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.1612456,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 53,
+      "engine": "generic_baseline",
+      "repeat": 13,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.1557406,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 54,
+      "engine": "prototype",
+      "repeat": 6,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.215625,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 55,
+      "engine": "generic_baseline",
+      "repeat": 8,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.1692586,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 56,
+      "engine": "prototype",
+      "repeat": 19,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.2154232,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 57,
+      "engine": "prototype",
+      "repeat": 9,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.2260675,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 58,
+      "engine": "prototype",
+      "repeat": 3,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.2134665,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 59,
+      "engine": "generic_baseline",
+      "repeat": 14,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.1684991,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 60,
+      "engine": "generic_baseline",
+      "repeat": 22,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.1734896,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 61,
+      "engine": "generic_baseline",
+      "repeat": 29,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.1811118,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 62,
+      "engine": "prototype",
+      "repeat": 0,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.2291351,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 63,
+      "engine": "prototype",
+      "repeat": 28,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.1960075,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 64,
+      "engine": "generic_baseline",
+      "repeat": 11,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.1608618,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 65,
+      "engine": "generic_baseline",
+      "repeat": 24,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.1763804,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 66,
+      "engine": "prototype",
+      "repeat": 8,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.2199526,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 67,
+      "engine": "generic_baseline",
+      "repeat": 14,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.1641578,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 68,
+      "engine": "generic_baseline",
+      "repeat": 4,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.177779,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 69,
+      "engine": "prototype",
+      "repeat": 29,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.238748,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 70,
+      "engine": "prototype",
+      "repeat": 13,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.2877101,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 71,
+      "engine": "prototype",
+      "repeat": 6,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.2806265,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 72,
+      "engine": "generic_baseline",
+      "repeat": 6,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.2056836,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 73,
+      "engine": "generic_baseline",
+      "repeat": 6,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.1766859,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 74,
+      "engine": "generic_baseline",
+      "repeat": 19,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.1662694,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 75,
+      "engine": "prototype",
+      "repeat": 19,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.2090037,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 76,
+      "engine": "prototype",
+      "repeat": 21,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.2332624,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 77,
+      "engine": "generic_baseline",
+      "repeat": 5,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.1591071,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 78,
+      "engine": "generic_baseline",
+      "repeat": 16,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.1488811,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 79,
+      "engine": "prototype",
+      "repeat": 20,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.2241661,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 80,
+      "engine": "prototype",
+      "repeat": 10,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.2107472,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 81,
+      "engine": "generic_baseline",
+      "repeat": 26,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.1679259,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 82,
+      "engine": "prototype",
+      "repeat": 18,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.2243454,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 83,
+      "engine": "prototype",
+      "repeat": 11,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.2145488,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 84,
+      "engine": "prototype",
+      "repeat": 27,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.2003604,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 85,
+      "engine": "generic_baseline",
+      "repeat": 13,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.1669654,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 86,
+      "engine": "generic_baseline",
+      "repeat": 6,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.1628646,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 87,
+      "engine": "generic_baseline",
+      "repeat": 3,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.1744981,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 88,
+      "engine": "generic_baseline",
+      "repeat": 22,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.1766752,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 89,
+      "engine": "prototype",
+      "repeat": 11,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.2068053,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 90,
+      "engine": "prototype",
+      "repeat": 14,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.2029535,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 91,
+      "engine": "prototype",
+      "repeat": 2,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.210703,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 92,
+      "engine": "prototype",
+      "repeat": 16,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.2213209,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 93,
+      "engine": "prototype",
+      "repeat": 1,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.2021499,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 94,
+      "engine": "generic_baseline",
+      "repeat": 7,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.1611136,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 95,
+      "engine": "prototype",
+      "repeat": 25,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.2200866,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 96,
+      "engine": "generic_baseline",
+      "repeat": 17,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.2009721,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 97,
+      "engine": "prototype",
+      "repeat": 3,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.2228699,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 98,
+      "engine": "generic_baseline",
+      "repeat": 10,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.1775191,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 99,
+      "engine": "generic_baseline",
+      "repeat": 29,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.1735069,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 100,
+      "engine": "prototype",
+      "repeat": 4,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.2117317,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 101,
+      "engine": "prototype",
+      "repeat": 27,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.2047622,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 102,
+      "engine": "prototype",
+      "repeat": 21,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.1978359,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 103,
+      "engine": "generic_baseline",
+      "repeat": 10,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.172228,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 104,
+      "engine": "prototype",
+      "repeat": 17,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.2178137,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 105,
+      "engine": "prototype",
+      "repeat": 14,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.2143993,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 106,
+      "engine": "generic_baseline",
+      "repeat": 3,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.163096,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 107,
+      "engine": "generic_baseline",
+      "repeat": 17,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.1805237,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 108,
+      "engine": "generic_baseline",
+      "repeat": 26,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.1697982,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 109,
+      "engine": "generic_baseline",
+      "repeat": 5,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.1649109,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 110,
+      "engine": "generic_baseline",
+      "repeat": 12,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.1706263,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 111,
+      "engine": "generic_baseline",
+      "repeat": 1,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.1664775,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 112,
+      "engine": "prototype",
+      "repeat": 5,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.2791531,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 113,
+      "engine": "prototype",
+      "repeat": 26,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.2180628,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 114,
+      "engine": "generic_baseline",
+      "repeat": 28,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.1641668,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 115,
+      "engine": "prototype",
+      "repeat": 18,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.200662,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 116,
+      "engine": "generic_baseline",
+      "repeat": 12,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.1683398,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 117,
+      "engine": "prototype",
+      "repeat": 16,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.231509,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 118,
+      "engine": "prototype",
+      "repeat": 19,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.2087235,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 119,
+      "engine": "prototype",
+      "repeat": 17,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.2296803,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 120,
+      "engine": "prototype",
+      "repeat": 10,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.2165909,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 121,
+      "engine": "generic_baseline",
+      "repeat": 26,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.2775614,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 122,
+      "engine": "generic_baseline",
+      "repeat": 8,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.206981,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 123,
+      "engine": "generic_baseline",
+      "repeat": 13,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.1998887,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 124,
+      "engine": "prototype",
+      "repeat": 23,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.2301148,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 125,
+      "engine": "prototype",
+      "repeat": 23,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.2047683,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 126,
+      "engine": "generic_baseline",
+      "repeat": 25,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.1658942,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 127,
+      "engine": "prototype",
+      "repeat": 4,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.2182835,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 128,
+      "engine": "generic_baseline",
+      "repeat": 3,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.1660118,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 129,
+      "engine": "prototype",
+      "repeat": 1,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.2043276,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 130,
+      "engine": "prototype",
+      "repeat": 15,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.2136817,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 131,
+      "engine": "prototype",
+      "repeat": 9,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.2072498,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 132,
+      "engine": "generic_baseline",
+      "repeat": 1,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.1532398,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 133,
+      "engine": "generic_baseline",
+      "repeat": 12,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.1605536,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 134,
+      "engine": "prototype",
+      "repeat": 22,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.1919465,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 135,
+      "engine": "prototype",
+      "repeat": 25,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.2359585,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 136,
+      "engine": "prototype",
+      "repeat": 18,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.2389564,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 137,
+      "engine": "generic_baseline",
+      "repeat": 18,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.2064459,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 138,
+      "engine": "prototype",
+      "repeat": 3,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.2188048,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 139,
+      "engine": "generic_baseline",
+      "repeat": 11,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.1640915,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 140,
+      "engine": "prototype",
+      "repeat": 8,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.2052901,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 141,
+      "engine": "prototype",
+      "repeat": 9,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.239548,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 142,
+      "engine": "prototype",
+      "repeat": 24,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.2439936,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 143,
+      "engine": "prototype",
+      "repeat": 22,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.2007511,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 144,
+      "engine": "generic_baseline",
+      "repeat": 5,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.1645123,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 145,
+      "engine": "generic_baseline",
+      "repeat": 27,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.1712165,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 146,
+      "engine": "prototype",
+      "repeat": 0,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.2508842,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 147,
+      "engine": "generic_baseline",
+      "repeat": 16,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.1803961,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 148,
+      "engine": "prototype",
+      "repeat": 13,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.2066369,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 149,
+      "engine": "prototype",
+      "repeat": 7,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.2061693,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 150,
+      "engine": "generic_baseline",
+      "repeat": 2,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.2010074,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 151,
+      "engine": "prototype",
+      "repeat": 20,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.2766606,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 152,
+      "engine": "generic_baseline",
+      "repeat": 9,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.159353,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 153,
+      "engine": "generic_baseline",
+      "repeat": 9,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.177814,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 154,
+      "engine": "generic_baseline",
+      "repeat": 0,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.1635361,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 155,
+      "engine": "prototype",
+      "repeat": 28,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.2012325,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 156,
+      "engine": "prototype",
+      "repeat": 29,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.2419946,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 157,
+      "engine": "generic_baseline",
+      "repeat": 23,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.1575932,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 158,
+      "engine": "generic_baseline",
+      "repeat": 23,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.1602763,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 159,
+      "engine": "prototype",
+      "repeat": 12,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.2069532,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 160,
+      "engine": "prototype",
+      "repeat": 14,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.2105042,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 161,
+      "engine": "generic_baseline",
+      "repeat": 21,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.1808319,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 162,
+      "engine": "prototype",
+      "repeat": 20,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.2154044,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 163,
+      "engine": "prototype",
+      "repeat": 28,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.2002993,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 164,
+      "engine": "generic_baseline",
+      "repeat": 1,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.1945797,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 165,
+      "engine": "prototype",
+      "repeat": 12,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.2050777,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 166,
+      "engine": "prototype",
+      "repeat": 7,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.2156613,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 167,
+      "engine": "prototype",
+      "repeat": 2,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.2185369,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 168,
+      "engine": "generic_baseline",
+      "repeat": 25,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.1654474,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 169,
+      "engine": "prototype",
+      "repeat": 11,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.2174315,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 170,
+      "engine": "prototype",
+      "repeat": 2,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.1890082,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 171,
+      "engine": "prototype",
+      "repeat": 15,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.2896619,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    },
+    {
+      "order": 172,
+      "engine": "generic_baseline",
+      "repeat": 18,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.1950418,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 173,
+      "engine": "prototype",
+      "repeat": 24,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.1982435,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 174,
+      "engine": "generic_baseline",
+      "repeat": 10,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.1657067,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 175,
+      "engine": "generic_baseline",
+      "repeat": 0,
+      "query": "CVE-2026-9012",
+      "duration_s": 0.176172,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "79b6588f46ee173a1ca762ba2eb67e88b9a76152c553b95bfb14917705f2d671"
+    },
+    {
+      "order": 176,
+      "engine": "generic_baseline",
+      "repeat": 9,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.1673279,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 177,
+      "engine": "prototype",
+      "repeat": 26,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.2108221,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 178,
+      "engine": "prototype",
+      "repeat": 22,
+      "query": "CVE-2026-1234",
+      "duration_s": 0.2036689,
+      "assertion_count": 2,
+      "verified": true,
+      "report_sha256": "7697254d81a81c6b7ea8a1105a5a89f460a19755e7f76642a338f08352282b71"
+    },
+    {
+      "order": 179,
+      "engine": "generic_baseline",
+      "repeat": 20,
+      "query": "CVE-2026-5678",
+      "duration_s": 0.1737897,
+      "assertion_count": 1,
+      "verified": true,
+      "report_sha256": "a3eca4a84731050e87feb6847b79aa1192dd5d5356002611cce48e3013a4d250"
+    }
+  ]
+}

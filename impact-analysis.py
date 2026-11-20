@@ -1,112 +1,88 @@
+"""Retrieve existing synthetic determinations; do not assess mission or cyber risk."""
+import argparse
 import json
+from pathlib import Path
+import re
 import sys
-import os
 
-if len(sys.argv) < 2:
-    print("Usage: impact-analysis.py <component_or_cve>")
-    sys.exit(1)
+ROOT = Path(__file__).resolve().parent
 
-search_value = " ".join(sys.argv[1:])
-component = search_value
 
-#
-# Resolve CVE -> Component
-#
+def load_json(path):
+    with path.open(encoding="utf-8") as stream:
+        return json.load(stream)
 
-try:
-    with open("prototype/data/cves.json", "r") as f:
-        cve_data = json.load(f)
 
-    for cve in cve_data["cves"]:
+def find_assertions(search_value, root=ROOT):
+    """Resolve a fixture CVE and retain every matching component use."""
+    component = search_value
+    cve_path = root / "prototype/data/cves.json"
+    if cve_path.exists():
+        for entry in load_json(cve_path)["cves"]:
+            if entry["cve"].casefold() == search_value.casefold():
+                component = entry["component"]
+                break
+    assertions = load_json(root / "prototype/srac/srac-assertions.json")["assertions"]
+    return component, [item for item in assertions
+                       if item["component"].casefold() == component.casefold()]
 
-        if cve["cve"].lower() == search_value.lower():
 
-            print(f"Resolved {search_value} -> {cve['component']}")
-            print()
+def format_assertion(item):
+    lines = [
+        f"Component: {item['component']}",
+        f"Mission Function: {item['missionFunctionId']}",
+        f"Relationship: {item.get('relationshipType', 'UNSPECIFIED')}",
+        f"Recorded Outcome: {item.get('missionAssuranceOutcome', 'UNSPECIFIED')}",
+        f"Recorded Authority: {item['authority']}",
+    ]
+    if "safetyRelated" in item:
+        safety = item["safetyRelated"]
+        lines.append(f"Safety Related: {safety if safety is not None else 'UNDETERMINED'}")
+    review = item.get("requiresReview")
+    status = "REVIEW REQUIRED" if review is True else (
+        "NO REVIEW REQUIRED" if review is False else "UNDETERMINED")
+    lines.extend([f"Recorded Review Status: {status}", "Evidence references:"])
+    lines.extend(item["evidence"])
+    return "\n".join(lines)
 
-            component = cve["component"]
-            break
 
-except FileNotFoundError:
-    pass
+def analyze(search_value, root=ROOT, output_dir=None):
+    component, matches = find_assertions(search_value, root)
+    if not matches:
+        return None, "No SRAC relationship found."
+    blocks = [
+        "SRAC DETERMINATION RETRIEVAL (SYNTHETIC PILOT)",
+        f"Input: {search_value}\nResolved Component: {component}\nAssertions: {len(matches)}",
+        "Retrieves prepared assertions and evidence IDs. Review flags are recorded\n"
+        "fixture values, not computed vulnerability impact or risk determinations.",
+    ]
+    blocks.extend(format_assertion(item) for item in matches)
+    output = "\n\n".join(blocks) + "\n"
+    directory = Path(output_dir) if output_dir is not None else root / "prototype/reports"
+    directory.mkdir(parents=True, exist_ok=True)
+    filename = re.sub(r"[^A-Za-z0-9._-]+", "_", matches[0]["component"])
+    report_path = directory / f"{filename}-impact.txt"
+    # One write per component retains every assertion in the saved report.
+    report_path.write_text(output, encoding="utf-8")
+    return report_path, output
 
-#
-# Load SRAC Assertions
-#
 
-with open("prototype/srac/srac-assertions.json", "r") as f:
-    data = json.load(f)
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("component_or_cve", nargs="+")
+    parser.add_argument("--output-dir", type=Path)
+    args = parser.parse_args(argv)
+    try:
+        path, output = analyze(" ".join(args.component_or_cve), output_dir=args.output_dir)
+    except (OSError, ValueError, KeyError, TypeError) as error:
+        print(f"Cannot retrieve SRAC data: {error}", file=sys.stderr)
+        return 2
+    print(output)
+    if path is None:
+        return 1
+    print(f"Report saved to: {path}")
+    return 0
 
-#
-# Ensure Reports Folder Exists
-#
 
-os.makedirs("prototype/reports", exist_ok=True)
-
-found = False
-
-for item in data["assertions"]:
-
-    if item["component"].lower() == component.lower():
-
-        found = True
-
-        report = []
-
-        report.append("========================================")
-        report.append("SRAC IMPACT ANALYSIS")
-        report.append("========================================")
-        report.append("")
-
-        report.append(f"Input: {search_value}")
-        report.append(f"Component: {item['component']}")
-        report.append("")
-
-        report.append(f"Mission Function: {item['missionFunctionId']}")
-        report.append(f"Authority: {item['authority']}")
-        report.append("")
-
-        if "safetyRelated" in item:
-            report.append(f"Safety Related: {item['safetyRelated']}")
-
-        if "requiresReview" in item:
-
-            if item["requiresReview"]:
-                report.append("Review Status: REVIEW REQUIRED")
-            else:
-                report.append("Review Status: NO REVIEW REQUIRED")
-
-        report.append("")
-        report.append("Evidence:")
-
-        for evidence in item["evidence"]:
-            report.append(evidence)
-
-        output = "\n".join(report)
-
-        #
-        # Display
-        #
-
-        print(output)
-
-        #
-        # Save Report
-        #
-
-        filename = item["component"].replace(" ", "_")
-
-        report_file = (
-            f"prototype/reports/{filename}-impact.txt"
-        )
-
-        with open(report_file, "w") as f:
-            f.write(output)
-
-        print()
-        print(f"Report saved to: {report_file}")
-        print()
-
-if not found:
-
-    print("No SRAC relationship found.")
+if __name__ == "__main__":
+    sys.exit(main())
