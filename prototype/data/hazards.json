@@ -1,0 +1,8 @@
+{
+  "hazards": [
+    {
+      "id": "HAZ-22",
+      "description": "Unauthorized command execution"
+    }
+  ]
+}

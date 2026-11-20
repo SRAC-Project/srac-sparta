@@ -1,0 +1,13 @@
+{
+  "mission": "TT&C Mission",
+  "functions": [
+    {
+      "id": "AUTH-CMD-001",
+      "name": "Command Authentication"
+    },
+    {
+      "id": "UPD-VER-002",
+      "name": "Software Update Verification"
+    }
+  ]
+}

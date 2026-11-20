@@ -1,0 +1,38 @@
+{
+  "assertions": [
+    {
+      "component": "OpenSSL",
+      "missionFunctionId": "AUTH-CMD-001",
+      "relationshipType": "PROTECTS",
+      "missionAssuranceOutcome": "RELEVANT",
+      "authority": "MISSION_OWNER",
+      "evidence": [
+        "REQ-101",
+        "HAZ-22",
+        "TEST-15"
+      ]
+    },
+    {
+      "component": "NASA CryptoLib",
+      "missionFunctionId": "UPD-VER-002",
+      "relationshipType": "PROTECTS",
+      "missionAssuranceOutcome": "RELEVANT",
+      "authority": "MISSION_OWNER",
+      "evidence": [
+        "REQ-201",
+        "TEST-201"
+      ]
+    },
+    {
+      "component": "Telemetry Library",
+      "missionFunctionId": "TLM-001",
+      "relationshipType": "SUPPORTS",
+      "missionAssuranceOutcome": "RELEVANT",
+      "authority": "MISSION_OWNER",
+      "evidence": [
+        "REQ-301",
+        "TEST-301"
+      ]
+    }
+  ]
+}
