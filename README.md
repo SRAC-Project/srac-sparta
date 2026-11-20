@@ -1,48 +1,37 @@
-SRAC-SPARTA
-Safety Relevance Assertion Capability (SRAC) reference implementation for SPARTA mission assurance, change impact analysis, and traceability.
+SRAC Reference Pilot
+Scope
+This repository is an independent Safety Relevance Assertion Capability (SRAC) reference pilot.
+
+SPARTA CM0022 Criticality Analysis concepts are used as a representative mission assurance example for evaluating SRAC traceability workflows.
+
+No affiliation with, endorsement by, or extension of the SPARTA framework is implied.
+
+Objective
+The objective of this pilot is to demonstrate how existing engineering information, including SBOMs, mission functions, assurance evidence, and supplier assertions, can be connected through machine-readable SRAC metadata to support faster impact analysis and review workflows.
+
+The pilot focuses on understanding the potential mission impact of software vulnerabilities, software updates, configuration changes, and supplier-provided software components without requiring the creation of a separate assurance ecosystem.
 
 Problem
-When a component changes or a vulnerability is discovered, determining mission impact requires searching across multiple engineering artifacts.
+When a software component changes or a vulnerability is discovered, engineers often need to manually review multiple engineering artifacts to understand:
+
+Which mission functions depend on the component
+Which assurance determinations may require reassessment
+Which requirements, hazards, and verification artifacts apply
+What supporting evidence already exists
+Which organizations or stakeholders need to review the change
+This information typically exists across multiple engineering repositories but is not easily exchangeable or machine-readable.
 
 Solution
-SRAC provides traceability from:
+SRAC provides traceability across existing engineering information.
 
-CVE ↓ Component ↓ Mission Function ↓ Authority ↓ Evidence
-
-Prototype
-Current implementation supports:
-
-SRAC Assertions
-SPDX SBOM
-Component Impact Analysis
-Report Generation
-Example
-OpenSSL ↓ AUTH-CMD-001 ↓ REQ-101 HAZ-22 TEST-15
-Pilot Scenarios
-The reference implementation demonstrates the following scenarios:
-
-Mission Assurance Traceability
-Software component → Mission Function → Evidence
-
-Example:
-
-OpenSSL ↓ AUTH-CMD-001 ↓ REQ-101 HAZ-22 TEST-15
-
-Vulnerability Impact Analysis
-A vulnerability can be mapped to affected mission functions and assurance evidence.
-
-Example:
-
-CVE-2026-1234 ↓ OpenSSL ↓ AUTH-CMD-001
-
-Shared Library Analysis
-A shared software library may support multiple mission functions, allowing impact analysis across multiple operational capabilities.
-
-Reassessment Workflow
-When a software component changes or a vulnerability is discovered, the implementation identifies mission functions and existing assurance evidence that may require review.
-
-Supplier Exchange
-Assurance information can be exchanged between a supplier and a mission integrator using structured SRAC metadata.
-
-Automated Reporting
-Impact analysis results are automatically exported as reports for review and decision support.
+CVE
+↓
+Software Component
+↓
+Mission Function
+↓
+Authority
+↓
+Assurance Evidence
+↓
+Impact Analysis Report
