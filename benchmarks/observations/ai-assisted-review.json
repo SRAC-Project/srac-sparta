@@ -1,0 +1,245 @@
+{
+  "manual_review_observation": {
+    "reviewer": "AI assistant performing file-by-file review, without a lookup script",
+    "started_utc": "2026-11-20T04:46:46+00:00",
+    "task": "For three synthetic CVEs, retrieve component, function, relationship, outcome, safety flag, recorded review flag, authority label and evidence IDs from the existing fixture files.",
+    "answers": [
+      {
+        "query": "CVE-2026-1234",
+        "component": "OpenSSL",
+        "missionFunctionId": "AUTH-CMD-001",
+        "relationshipType": "PROTECTS",
+        "missionAssuranceOutcome": "RELEVANT",
+        "safetyRelated": true,
+        "requiresReview": true,
+        "authority": "MISSION_OWNER",
+        "evidence": [
+          "REQ-101",
+          "HAZ-22",
+          "TEST-15"
+        ]
+      },
+      {
+        "query": "CVE-2026-1234",
+        "component": "OpenSSL",
+        "missionFunctionId": "UPD-VER-002",
+        "relationshipType": "SUPPORTS",
+        "missionAssuranceOutcome": "RELEVANT",
+        "safetyRelated": false,
+        "requiresReview": true,
+        "authority": "MISSION_OWNER",
+        "evidence": [
+          "REQ-201",
+          "TEST-201"
+        ]
+      },
+      {
+        "query": "CVE-2026-5678",
+        "component": "NASA CryptoLib",
+        "missionFunctionId": "UPD-VER-002",
+        "relationshipType": "PROTECTS",
+        "missionAssuranceOutcome": "RELEVANT",
+        "safetyRelated": true,
+        "requiresReview": false,
+        "authority": "MISSION_OWNER",
+        "evidence": [
+          "REQ-201",
+          "TEST-201"
+        ]
+      },
+      {
+        "query": "CVE-2026-9012",
+        "component": "Telemetry Library",
+        "missionFunctionId": "TLM-001",
+        "relationshipType": "SUPPORTS",
+        "missionAssuranceOutcome": "RELEVANT",
+        "safetyRelated": false,
+        "requiresReview": false,
+        "authority": "MISSION_OWNER",
+        "evidence": [
+          "REQ-301",
+          "TEST-301"
+        ]
+      }
+    ],
+    "additional_review_findings": [
+      "REQ-101 and TEST-15 have ID-only entries in evidence.json, without actual requirement or test evidence contents.",
+      "HAZ-22 has an entry describing unauthorized command execution in hazards.json.",
+      "REQ-201, TEST-201, REQ-301 and TEST-301 lack entries in the supplied evidence catalog.",
+      "Telemetry Library is absent from components.json and the SBOM excerpt; TLM-001 is absent from mission-model.json.",
+      "Supplier and mission assertions for CryptoLib are separate fixture examples; no verified handoff is represented."
+    ],
+    "limitations": [
+      "Single AI-assisted observation, not a human practitioner trial or an independent review.",
+      "Reviewer had prior familiarity with these exact fixtures and previously saw the automated answers.",
+      "Wall clock includes tool calls, model generation, report transcription and service latency.",
+      "Existing prepared SRAC records were used; no baseline without SRAC metadata was supplied.",
+      "Additional evidence/inventory checks exceed the automated lookup's task, so total review time cannot be treated as equivalent-work time savings.",
+      "No 40-minute human baseline or production process saving can be inferred."
+    ],
+    "finished_utc": "2026-11-20T04:47:28+00:00",
+    "elapsed_wall_seconds": 42,
+    "answer_verification": "PASS: all four manually transcribed assertions exactly match all fields in the fixtures."
+  },
+  "automated_three_query_batches": {
+    "n": 30,
+    "median_seconds": 0.6368237,
+    "p95_seconds": 0.9355437,
+    "max_seconds": 1.1922083,
+    "all_outputs_verified": true,
+    "trials": [
+      {
+        "repeat": 0,
+        "three_query_elapsed_seconds": 1.1922083,
+        "verified": true
+      },
+      {
+        "repeat": 1,
+        "three_query_elapsed_seconds": 0.7187344,
+        "verified": true
+      },
+      {
+        "repeat": 2,
+        "three_query_elapsed_seconds": 0.6473051,
+        "verified": true
+      },
+      {
+        "repeat": 3,
+        "three_query_elapsed_seconds": 0.7080539,
+        "verified": true
+      },
+      {
+        "repeat": 4,
+        "three_query_elapsed_seconds": 0.6070927,
+        "verified": true
+      },
+      {
+        "repeat": 5,
+        "three_query_elapsed_seconds": 0.611094,
+        "verified": true
+      },
+      {
+        "repeat": 6,
+        "three_query_elapsed_seconds": 0.6142126,
+        "verified": true
+      },
+      {
+        "repeat": 7,
+        "three_query_elapsed_seconds": 0.6289935,
+        "verified": true
+      },
+      {
+        "repeat": 8,
+        "three_query_elapsed_seconds": 0.7043844,
+        "verified": true
+      },
+      {
+        "repeat": 9,
+        "three_query_elapsed_seconds": 0.6468523,
+        "verified": true
+      },
+      {
+        "repeat": 10,
+        "three_query_elapsed_seconds": 0.6391694,
+        "verified": true
+      },
+      {
+        "repeat": 11,
+        "three_query_elapsed_seconds": 0.7052564,
+        "verified": true
+      },
+      {
+        "repeat": 12,
+        "three_query_elapsed_seconds": 0.6111517,
+        "verified": true
+      },
+      {
+        "repeat": 13,
+        "three_query_elapsed_seconds": 0.6289762,
+        "verified": true
+      },
+      {
+        "repeat": 14,
+        "three_query_elapsed_seconds": 0.6153708,
+        "verified": true
+      },
+      {
+        "repeat": 15,
+        "three_query_elapsed_seconds": 0.6257009,
+        "verified": true
+      },
+      {
+        "repeat": 16,
+        "three_query_elapsed_seconds": 0.6320202,
+        "verified": true
+      },
+      {
+        "repeat": 17,
+        "three_query_elapsed_seconds": 0.6122669,
+        "verified": true
+      },
+      {
+        "repeat": 18,
+        "three_query_elapsed_seconds": 0.5940022,
+        "verified": true
+      },
+      {
+        "repeat": 19,
+        "three_query_elapsed_seconds": 0.6080517,
+        "verified": true
+      },
+      {
+        "repeat": 20,
+        "three_query_elapsed_seconds": 0.634478,
+        "verified": true
+      },
+      {
+        "repeat": 21,
+        "three_query_elapsed_seconds": 0.9355437,
+        "verified": true
+      },
+      {
+        "repeat": 22,
+        "three_query_elapsed_seconds": 0.7544677,
+        "verified": true
+      },
+      {
+        "repeat": 23,
+        "three_query_elapsed_seconds": 0.6213201,
+        "verified": true
+      },
+      {
+        "repeat": 24,
+        "three_query_elapsed_seconds": 0.6858615,
+        "verified": true
+      },
+      {
+        "repeat": 25,
+        "three_query_elapsed_seconds": 0.6070869,
+        "verified": true
+      },
+      {
+        "repeat": 26,
+        "three_query_elapsed_seconds": 0.7389252,
+        "verified": true
+      },
+      {
+        "repeat": 27,
+        "three_query_elapsed_seconds": 0.6429565,
+        "verified": true
+      },
+      {
+        "repeat": 28,
+        "three_query_elapsed_seconds": 0.6600808,
+        "verified": true
+      },
+      {
+        "repeat": 29,
+        "three_query_elapsed_seconds": 0.7027788,
+        "verified": true
+      }
+    ],
+    "timing_boundary": "Three sequential fresh Python processes including input reads, lookup, console capture, full report writes and exit; verification outside timer."
+  },
+  "interpretation": "The AI review and automated lookup recovered the same four recorded assertions. The review also checked additional catalogs and included assistant/tool latency. This is not an equivalent-work human baseline and no human time-saving percentage or speedup is calculated."
+}
