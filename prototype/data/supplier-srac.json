@@ -1,0 +1,11 @@
+{
+  "supplier": "NASA Supplier",
+  "component": "NASA CryptoLib",
+  "version": "1.0",
+  "assertion": "MISSION_RELEVANT",
+  "authority": "SUPPLIER",
+  "evidence": [
+    "REQ-201",
+    "TEST-201"
+  ]
+}
